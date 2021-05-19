@@ -1,0 +1,57 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ *
+ * @author hardi
+ */
+public class httpservlet extends HttpServlet {
+ public void doGet(HttpServletRequest req,HttpServletResponse res){
+        
+          
+        
+            PrintWriter out = res.getWriter();
+                  
+            
+            out.println("<h1>httpservlet doGet Method</h1>");
+           
+        } 
+}
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+          <a href="httpservlet">httpservet</a><br>
+    </body>
+</html>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>httpservlet</servlet-name>
+        <servlet-class>httpservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>httpservlet</servlet-name>
+        <url-pattern>/httpservlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
+
